@@ -59,11 +59,6 @@ function updateCharts(sample){
     };
 
     var barData = [bartrace];
-
-    var barData ={
-
-
-    };
    
 
     var barlayout={
