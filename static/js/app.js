@@ -54,11 +54,11 @@ var trace1 = {
 
 var barData = [trace1];
 
-var barData =[{
+var barData ={
    
 
 
-}];
+};
 
 var barlayout={
 
