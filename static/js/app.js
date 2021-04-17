@@ -1,12 +1,12 @@
 //Read Path
 var readpath = "../../samples.json";
 
-//Initial Load Function
+//Init  Function
 function init(){
 
     //D3 Read In Data
 
-    d3.json(readpath).then((data) => {
+    d3.json(readpath).then(data => {
         var names = data.names;
         var samples = data.samples;
         var metadata = data.metadata;
@@ -14,7 +14,7 @@ function init(){
         var dropdown = d3.select("#selDataset");
 
         names.forEach(sample => {
-            dropDown.append("option")
+            dropdown.append("option")
             .text(sample)
             .property("value",sample);
         });
@@ -78,6 +78,9 @@ Plotly.newplot("bar", bardata, barlayout);
 
 
 
+
+
+
 //Bubble Chart Trace 2
 
 var trace2 =[{
@@ -99,12 +102,17 @@ Plotly.newPlot("bubble", bubbleData, bubblelayout);
 
 //Update Function
 
-function updateInfo(ID){    
-    console.log(ID);
-    updateDemography (ID);
-    updatePlots(ID);
-    updateGauge(ID);
+function updateInfo(name){
+
+    updateTable(name);
+    updateCharts(name);
+
 };
 
 
+
+
+
+
+//Call Init
 init();
