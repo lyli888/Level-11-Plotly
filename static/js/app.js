@@ -42,7 +42,7 @@ function updateCharts(){
 
     //Bar Plot Trace 1
 
-var trace1 = {
+    var trace1 = {
     
     x: slicedIds.reverse(),
     y: slicedValues.reverse(),
@@ -52,53 +52,47 @@ var trace1 = {
 
     };
 
-var barData = [trace1];
+    var barData = [trace1];
 
-var barData ={
+    var barData ={
+
+
+    };
    
 
+    var barlayout={
+
+
+    };
+
+
+
+    Plotly.newplot("bar", bardata, barlayout);
+
+
+
+    //Bubble Chart Trace 2
+
+    var trace2 ={
+        x: otuIds,
+        y: sampleValues,
+        text: otuLabels,
+        mode: "markers",
+        marker: {
+        color: otuIds,
+        size: sampleValues
+    }; 
+
+
+    var bubbleData = [trace2];
+
+    var bubblelayout = {
+
+    };
+
+    Plotly.newPlot("bubble", bubbleData, bubblelayout); 
 
 };
-
-var barlayout={
-
-
-
-
-};
-
-
-Plotly.newplot("bar", bardata, barlayout);
-
-
-
-
-//Bubble Chart Trace 2
-
-var trace2 ={
-    x: otuIds,
-    y: sampleValues,
-    text: otuLabels,
-    mode: "markers",
-    marker: {
-    color: otuIds,
-    size: sampleValues
-}};
-
-
-var bubbleData = [trace2];
-
-var bubblelayout = {
-
-
-};
-
-Plotly.newPlot("bubble", bubbleData, bubblelayout); 
-
-};
-
-
-
 
 
 
