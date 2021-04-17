@@ -49,18 +49,16 @@ function updateCharts(sample){
     var topValues = sampleValues.slice(0,10);
     var topLabels = otuLabels.slice(0,10);
 
-    //Bar Plot Trace 1
-    var trace1 = {
-    
-    x: slicedIds.reverse(),
-    y: slicedValues.reverse(),
-    text: slicedLabels.reverse(),
-    type: "bar",
-    orientation: "h",
-
+    //Bar Plot
+    var bartrace = {
+        x: slicedIds.reverse(),
+        y: slicedValues.reverse(),
+        text: slicedLabels.reverse(),
+        type: "bar",
+        orientation: "h",
     };
 
-    var barData = [trace1];
+    var barData = [bartrace];
 
     var barData ={
 
@@ -79,9 +77,9 @@ function updateCharts(sample){
 
 
 
-    //Bubble Chart Trace 2
+    //Bubble Chart
 
-    var trace2 ={
+    var bubbletrace ={
         x: otuIds,
         y: sampleValues,
         text: otuLabels,
@@ -92,7 +90,7 @@ function updateCharts(sample){
         }
     };
 
-    var bubbleData = [trace2];
+    var bubbleData = [bubbletrace];
 
     var bubblelayout = {      
         title: "Bubble Chart: Operational Taxonomic Units",
