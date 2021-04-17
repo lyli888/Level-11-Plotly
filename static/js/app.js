@@ -56,7 +56,7 @@ var trace1 = {
     },
 };
 
-bardata = [trace1];
+var bardata = [trace1];
 
 var bardata =[{
     x:top10sample_values,
@@ -65,6 +65,13 @@ var bardata =[{
     text:top10otu_labels,
     orientation: "h"
 }];
+
+var barlayout={
+
+
+
+
+};
 
 
 Plotly.newplot("bar", bardata, barlayout);
@@ -78,7 +85,14 @@ var trace2 =[{
 
 }];
 
-bubbleData = [trace2];
+var bubbleData = [trace2];
+
+var bubblelayout = {
+
+
+
+
+};
 
 Plotly.newPlot("bubble", bubbleData, bubblelayout); 
 
@@ -91,5 +105,6 @@ function updateInfo(ID){
     updatePlots(ID);
     updateGauge(ID);
 };
+
 
 init();
