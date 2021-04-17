@@ -9,7 +9,14 @@ d3.json(readpath).then((data) => {
 
 });
 
+function findID(value){    
+    var id = d3.select('#selDataset').property("value")
+    return +value.id === +id
+    };
+
+
 var dropdown = d3.select("#selDataset");
+
 
 names.forEach(name => { 
     console.log(name);
@@ -33,9 +40,3 @@ Plotly.newPlot("bubble", bubbleData);
 
 //Update Function
 
-function findID(ID){    
-    function findId(value) {
-    var id = d3.select('#selDataset').property("value")
-    console.log(`filter id: ${typeof(id)}`)
-    return +value.id === +id
-    }}
