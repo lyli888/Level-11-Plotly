@@ -5,7 +5,6 @@ var readpath = "../../samples.json";
 function init(){
 
     //D3 Read In Data
-
     d3.json(readpath).then(data => {
         var names = data.names;
         var samples = data.samples;
@@ -18,6 +17,11 @@ function init(){
             .text(sample)
             .property("value",sample);
         });
+
+        var initSample = names[0];
+        console.log(initSample);
+        createTable(initSample);
+        createCharts(initSample);
     
     });
 
@@ -30,6 +34,9 @@ function updateInfo(name){
     updateCharts(name);
 
 };
+
+
+
 
 //Update Table
 function updateTable(){
@@ -98,6 +105,7 @@ var barlayout={
 
 
 Plotly.newplot("bar", bardata, barlayout);
+
 
 
 
