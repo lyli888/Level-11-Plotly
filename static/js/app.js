@@ -37,15 +37,6 @@ function updateInfo(name){
 
 
 
-
-//Update Metadata Table
-function updateMetatable(){
-
-
-};
-
-
-
 //Update Charts
 function updateCharts(){
 
@@ -53,11 +44,13 @@ function updateCharts(){
 
 var trace1 = {
     
+    x: slicedIds.reverse(),
+    y: slicedValues.reverse(),
+    text: slicedLabels.reverse(),
+    type: "bar",
+    orientation: "h",
 
-    
-    },
-
-};
+    };
 
 var barData = [trace1];
 
@@ -80,9 +73,6 @@ Plotly.newplot("bar", bardata, barlayout);
 
 
 
-
-
-
 //Bubble Chart Trace 2
 
 var trace2 =[{
@@ -100,23 +90,29 @@ var bubblelayout = {
 
 Plotly.newPlot("bubble", bubbleData, bubblelayout); 
 
-
-
-
-
-
-
-
-
-
-
-
 };
 
 
 
 
 
+
+//Update Metadata Table
+function updateMetatable(){
+
+    d3.json(path).then(data =>{
+        var metadata = data.metadata;
+        var resultsData = metadata.filter(d => d.id == sample);
+        var finaldata = resultsData[0];
+        var demographics = d3.select("#sample-metadata");
+        demomographics.html("");
+        Object.entries(finaldata).forEach(([key, value]) => {
+            demographics.append("h6").text(`${key}: ${value}`)
+        });
+        console.log(finaldata);
+    })
+
+};
 
 
 //Call Init
