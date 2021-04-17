@@ -40,7 +40,7 @@ d3.select(window).on('load', init(data));
 dropdown.on('change', updateInfo)
 
 
-//Bar Plot
+//Bar Plot Trace 1
 
 var trace1 = {
     x: slicedSamples,
@@ -70,9 +70,16 @@ Plotly.newplot("bar", barData, barLayout);
 
 
 
-//Bubble Chart
+//Bubble Chart Trace 2
 
-Plotly.newPlot("bubble", bubbleData); 
+var trace2 =[{
+
+
+}];
+
+bubbleData = [trace2];
+
+Plotly.newPlot("bubble", bubbleData, bubblelayout); 
 
 
 //Update Function
