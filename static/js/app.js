@@ -1,13 +1,23 @@
-//Read In Data
-
+//Read Path
 var readpath = "../../samples.json";
 
-d3.json(readpath).then((data) => {
-    var names = data.names;
-    var samples = data.samples;
-    var metadata = data.metadata;
+//Initial Load Function
+function init(){
 
-});
+    //D3 Read In Data
+    d3.json(readpath).then((data) => {
+        var names = data.names;
+        var samples = data.samples;
+        var metadata = data.metadata;
+
+        var dropdown = d3.select("#selDataset");
+    
+    });
+
+};
+
+
+
 
 function findID(value){    
     var id = d3.select('#selDataset').property("value")
@@ -15,12 +25,13 @@ function findID(value){
     };
 
 
-var dropdown = d3.select("#selDataset");
-d3.select(window).on('load', initialLoad(data));
+
+
+//Load Window
+d3.select(window).on('load', init(data));
+
 
 dropdown.on('change', updateInfo)
-
-
 
 
 //Bar Plot
@@ -49,7 +60,7 @@ var barData =[{
 }];
 
 
-Plotly.newplot("bar", barData);
+Plotly.newplot("bar", barData, barLayout);
 
 
 
@@ -66,3 +77,5 @@ function updateInfo(ID){
     updatePlots(ID);
     updateGauge(ID);
 };
+
+init();
