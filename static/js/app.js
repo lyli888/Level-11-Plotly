@@ -40,6 +40,7 @@ function updateInfo(name){
 //Update Charts
 function updateCharts(){
 
+
     //Bar Plot Trace 1
 
     var trace1 = {
