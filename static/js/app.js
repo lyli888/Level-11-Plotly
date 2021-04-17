@@ -25,6 +25,8 @@ function init(){
 
 };
 
+
+
 //Update Function
 function updateInfo(name){
 
@@ -47,17 +49,7 @@ function updateMetatable(){
 //Update Charts
 function updateCharts(){
 
-
-
-
-
-};
-
-
-
-
-
-//Bar Plot Trace 1
+    //Bar Plot Trace 1
 
 var trace1 = {
     x: slicedSamples,
@@ -116,6 +108,17 @@ var bubblelayout = {
 Plotly.newPlot("bubble", bubbleData, bubblelayout); 
 
 
+
+
+
+
+
+
+
+
+
+
+};
 
 
 
