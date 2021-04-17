@@ -11,6 +11,12 @@ function init(){
         var metadata = data.metadata;
 
         var dropdown = d3.select("#selDataset");
+
+        names.forEach(sample => {
+            dropDown.append("option")
+            .text(sample)
+            .property("value",sample);
+        });
     
     });
 
