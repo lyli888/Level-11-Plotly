@@ -75,10 +75,15 @@ Plotly.newplot("bar", bardata, barlayout);
 
 //Bubble Chart Trace 2
 
-var trace2 =[{
-
-
-}];
+var trace2 ={
+    x: otuIds,
+    y: sampleValues,
+    text: otuLabels,
+    mode: "markers",
+    marker: {
+    color: otuIds,
+    size: sampleValues
+}};
 
 
 var bubbleData = [trace2];
