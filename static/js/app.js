@@ -1,14 +1,12 @@
 //Read Path
 var readpath = "../../samples.json";
 
-//Init  Function
+//Init  Function To Load Dropdown menu at start
 function init(){
 
     //D3 Read In Data
     d3.json(readpath).then(data => {
         var names = data.names;
-        var samples = data.samples;
-        var metadata = data.metadata;
 
         var dropdown = d3.select("#selDataset");
 
@@ -20,8 +18,8 @@ function init(){
 
         var initSample = names[0];
         console.log(initSample);
-        createTable(initSample);
-        createCharts(initSample);
+        updateTable(initSample);
+        updateCharts(initSample);
     
     });
 
