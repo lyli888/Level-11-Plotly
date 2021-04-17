@@ -87,8 +87,15 @@ function updateCharts(){
 
     var bubbleData = [trace2];
 
-    var bubblelayout = {
+    var bubblelayout = {      
+        title: "Bubble Chart: Operational Taxonomic Units",
+        margin: {
 
+            l: 150,
+            r: 150,
+            t: 150, 
+            b: 150,
+        }
     };
 
     Plotly.newPlot("bubble", bubbleData, bubblelayout); 
