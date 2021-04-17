@@ -82,8 +82,8 @@ function updateCharts(){
         marker: {
         color: otuIds,
         size: sampleValues
-    }; 
-
+        }
+    };
 
     var bubbleData = [trace2];
 
@@ -102,8 +102,8 @@ function updateMetatable(){
 
     d3.json(readpath).then(data =>{
         var metadata = data.metadata;
-        var resultsData = metadata.filter(d => d.id == sample);
-        var finaldata = resultsData[0];
+        var resultsdata = metadata.filter(d => d.id == sample);
+        var finaldata = resultsdata[0];
         var demographics = d3.select("#sample-metadata");
         demomographics.html("");
         Object.entries(finaldata).forEach(([key, value]) => {
