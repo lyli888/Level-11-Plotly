@@ -7,7 +7,6 @@ function init(){
     //D3 Read In Data
     d3.json(readpath).then(data => {
         var names = data.names;
-        
         var dropdown = d3.select("#selDataset");
 
         names.forEach(sample => {
@@ -40,9 +39,17 @@ function updateInfo(name){
 //Update Charts
 function updateCharts(sample){
 
+    //Graph Info Vars
+    var otuIds = currentdata.otu_ids;
+    var sampleValues = currentdata.sample_values;
+    var otuLabels = currentdata.otu_labels;
+
+    //Top 10
+    var topTen = otuIds.slice(0,10);
+    var topValues = sampleValues.slice(0,10);
+    var topLabels = otuLabels.slice(0,10);
 
     //Bar Plot Trace 1
-
     var trace1 = {
     
     x: slicedIds.reverse(),
@@ -110,13 +117,13 @@ function updateMetatable(sample){
     d3.json(readpath).then(data =>{
         var metadata = data.metadata;
         var resultsdata = metadata.filter(d => d.id == sample);
-        var finaldata = resultsdata[0];
+        var currentdata = resultsdata[0];
         var demographics = d3.select("#sample-metadata");
         demomographics.html("");
-        Object.entries(finaldata).forEach(([key, value]) => {
+        Object.entries(currentdata).forEach(([key, value]) => {
             demographics.append("h6").text(`${key}: ${value}`)
         });
-        console.log(finaldata);
+        console.log(currentdata);
     })
 
 };
