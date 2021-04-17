@@ -18,7 +18,7 @@ function init(){
 
         var initSample = names[0];
         console.log(initSample);
-        updateTable(initSample);
+        updateMetatable(initSample);
         updateCharts(initSample);
     
     });
@@ -28,7 +28,7 @@ function init(){
 //Update Function
 function updateInfo(name){
 
-    updateTable(name);
+    updateMetatable(name);
     updateCharts(name);
 
 };
@@ -37,7 +37,7 @@ function updateInfo(name){
 
 
 //Update Metadata Table
-function updateTable(){
+function updateMetatable(){
 
 
 };
