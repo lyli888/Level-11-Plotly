@@ -5,6 +5,7 @@ var readpath = "../../samples.json";
 function init(){
 
     //D3 Read In Data
+
     d3.json(readpath).then((data) => {
         var names = data.names;
         var samples = data.samples;
@@ -55,9 +56,9 @@ var trace1 = {
     },
 };
 
-barData = [trace1];
+bardata = [trace1];
 
-var barData =[{
+var bardata =[{
     x:top10sample_values,
     y:top10otu_ids.map(id => ("OTU" + id.toString())),
     type:"bar",
@@ -66,7 +67,7 @@ var barData =[{
 }];
 
 
-Plotly.newplot("bar", barData, barLayout);
+Plotly.newplot("bar", bardata, barlayout);
 
 
 
