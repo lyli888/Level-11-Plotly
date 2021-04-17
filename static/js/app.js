@@ -1,10 +1,23 @@
+//Read In Data
+
 var readpath = "../../samples.json"
 
-function readSamples() {
-    d3.json(readpath).then(function(data) => {
+d3.json(readpath).then((data) => {
     var names = data.names;
-    var sample = data.samples;
+    var samples = data.samples;
     var metadata = data.metadata;
-}
-console.log(samples);
-console.log(metadata);
+};
+
+var dropdown = d3.select("#selDataset");
+
+names.forEach(name => { 
+    console.log(name);
+    var drop_option = dropdown.append("option");
+    drop_option.text(name);
+};
+
+//Bar Plot
+
+Plotly.newplot("bar", barData, barLayout);
+
+//Bubble Chart
