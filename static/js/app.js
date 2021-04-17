@@ -36,7 +36,7 @@ function updateInfo(name){
 
 
 
-//Update Table
+//Update Metadata Table
 function updateTable(){
 
 
@@ -45,8 +45,8 @@ function updateTable(){
 
 
 //Update Charts
-
 function updateCharts(){
+
 
 
 
@@ -54,10 +54,6 @@ function updateCharts(){
 };
 
 
-function findID(value){    
-    var id = d3.select('#selDataset').property("value")
-    return +value.id === +id
-    };
 
 
 
