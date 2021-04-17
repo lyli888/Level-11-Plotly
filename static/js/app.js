@@ -1,6 +1,6 @@
 //Read In Data
 
-var readpath = "../../samples.json"
+var readpath = "../../samples.json";
 
 d3.json(readpath).then((data) => {
     var names = data.names;
@@ -21,6 +21,19 @@ names.forEach(name => {
 
 //Bar Plot
 
-Plotly.newplot("bar", barData, barLayout);
+Plotly.newplot("bar", barData);
+
+
 
 //Bubble Chart
+
+
+
+
+//Update Function
+
+function findID(ID){    
+    console.log(ID);
+    updateDemography(ID);
+    updatePlots(ID);
+};
