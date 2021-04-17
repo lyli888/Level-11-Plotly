@@ -38,7 +38,7 @@ function updateInfo(name){
 
 
 //Update Charts
-function updateCharts(){
+function updateCharts(sample){
 
 
     //Bar Plot Trace 1
@@ -105,7 +105,7 @@ function updateCharts(){
 
 
 //Update Metadata Table
-function updateMetatable(){
+function updateMetatable(sample){
 
     d3.json(readpath).then(data =>{
         var metadata = data.metadata;
