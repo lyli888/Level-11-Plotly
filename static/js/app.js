@@ -23,7 +23,30 @@ function init(){
 
 };
 
+//Update Function
+function updateInfo(name){
 
+    updateTable(name);
+    updateCharts(name);
+
+};
+
+//Update Table
+function updateTable(){
+
+
+};
+
+
+
+//Update Charts
+
+function updateCharts(){
+
+
+
+
+};
 
 
 function findID(value){    
@@ -88,11 +111,10 @@ var trace2 =[{
 
 }];
 
+
 var bubbleData = [trace2];
 
 var bubblelayout = {
-
-
 
 
 };
@@ -100,14 +122,7 @@ var bubblelayout = {
 Plotly.newPlot("bubble", bubbleData, bubblelayout); 
 
 
-//Update Function
 
-function updateInfo(name){
-
-    updateTable(name);
-    updateCharts(name);
-
-};
 
 
 
