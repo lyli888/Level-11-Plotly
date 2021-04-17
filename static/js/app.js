@@ -57,14 +57,6 @@ function updateCharts(){
 
 
 
-
-//Load Window
-d3.select(window).on('load', init(data));
-
-
-dropdown.on('change', updateInfo)
-
-
 //Bar Plot Trace 1
 
 var trace1 = {
@@ -80,9 +72,9 @@ var trace1 = {
     },
 };
 
-var bardata = [trace1];
+var barData = [trace1];
 
-var bardata =[{
+var barData =[{
     x:top10sample_values,
     y:top10otu_ids.map(id => ("OTU" + id.toString())),
     type:"bar",
