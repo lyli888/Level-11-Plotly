@@ -105,7 +105,7 @@ Plotly.newPlot("bubble", bubbleData, bubblelayout);
 //Update Metadata Table
 function updateMetatable(){
 
-    d3.json(path).then(data =>{
+    d3.json(readpath).then(data =>{
         var metadata = data.metadata;
         var resultsData = metadata.filter(d => d.id == sample);
         var finaldata = resultsData[0];
