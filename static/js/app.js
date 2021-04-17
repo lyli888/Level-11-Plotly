@@ -1,6 +1,10 @@
-d3.json("samples.json").then((data) => {
-    var sample_var = data.samples;
-    var metadata_var = data.metadata;
+var readpath = "../../samples.json"
+
+function readSamples() {
+    d3.json(readpath).then(function(data) => {
+    var names = data.names;
+    var sample = data.samples;
+    var metadata = data.metadata;
 }
-console.log(sample_var)
-console.log(metadata_var)
+console.log(samples);
+console.log(metadata);
