@@ -52,26 +52,19 @@ function updateCharts(){
     //Bar Plot Trace 1
 
 var trace1 = {
-    x: slicedSamples,
-    y: slicedOtu.map(function (d) {
-        return `OTU ${d} `
-    }),
-    text: slicedOtuLabels,
-    type: "bar",
-    orientation: "h",
-    marker: {
-        color: randomColorBar,
+    
+
+    
     },
+
 };
 
 var barData = [trace1];
 
 var barData =[{
-    x:top10sample_values,
-    y:top10otu_ids.map(id => ("OTU" + id.toString())),
-    type:"bar",
-    text:top10otu_labels,
-    orientation: "h"
+   
+
+
 }];
 
 var barlayout={
