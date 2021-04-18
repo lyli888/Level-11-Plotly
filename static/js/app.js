@@ -38,68 +38,70 @@ function updateInfo(name){
 
 //Update Charts
 function updateCharts(sample){
+    d3.json(readpath).then(data => {
 
-    //Graph Info Vars
-    var otuIds = currentdata.otu_ids;
-    var sampleValues = currentdata.sample_values;
-    var otuLabels = currentdata.otu_labels;
+        var samples = data.samples;
 
-    //Top 10 Slice
-    var topTen = otuIds.slice(0,10);
-    var topValues = sampleValues.slice(0,10);
-    var topLabels = otuLabels.slice(0,10);
+        //Graph Info Vars
+        var otuIds = currentdata.otu_ids;
+        var sampleValues = currentdata.sample_values;
+        var otuLabels = currentdata.otu_labels;
 
-    //Bar Plot
-    var bartrace = {
-        x: topTen.reverse(),
-        y: topValues.reverse(),
-        text: topLabels.reverse(),
-        type: "bar",
-        orientation: "h",
-    };
+        //Top 10 Slice
+        var topTen = otuIds.slice(0,10);
+        var topValues = sampleValues.slice(0,10);
+        var topLabels = otuLabels.slice(0,10);
 
-    var barData = [bartrace];
+        //Bar Plot
+        var bartrace = {
+            x: topTen.reverse(),
+            y: topValues.reverse(),
+            text: topLabels.reverse(),
+            type: "bar",
+            orientation: "h",
+        };
+
+        var barData = [bartrace];
    
-
-    var barlayout={
-
-
-    };
+        var barlayout={
 
 
-
-    Plotly.newplot("bar", bardata, barlayout);
+        };
 
 
 
-    //Bubble Chart
+        Plotly.newplot("bar", bardata, barlayout);
 
-    var bubbletrace ={
-        x: otuIds,
-        y: sampleValues,
-        text: otuLabels,
-        mode: "markers",
-        marker: {
-        color: otuIds,
-        size: sampleValues
+
+
+        //Bubble Chart
+
+        var bubbletrace = {
+            x: otuIds,
+            y: sampleValues,
+            text: otuLabels,
+            mode: "markers",
+            marker: {
+                color: otuIds,
+                size: sampleValues
         }
     };
 
-    var bubbleData = [bubbletrace];
+        var bubbleData = [bubbletrace];
 
-    var bubblelayout = {      
-        title: "Bubble Chart: Operational Taxonomic Units",
-        margin: {
+        var bubblelayout = {      
+            title: "Bubble Chart: Operational Taxonomic Units",
+            margin: {
 
-            l: 150,
-            r: 150,
-            t: 150, 
-            b: 150,
+                l: 150,
+                r: 150,
+                t: 150, 
+                b: 150,
         }
     };
 
     Plotly.newPlot("bubble", bubbleData, bubblelayout); 
-
+    });
 };
 
 
