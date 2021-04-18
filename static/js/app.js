@@ -1,7 +1,7 @@
-//Read Path
+//Read Path To Samples File
 var readpath = "../../samples.json";
 
-//Init  Function To Load Dropdown menu at start
+//Init Function
 function initialize(){
 
     //D3 Read In Data
