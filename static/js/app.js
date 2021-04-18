@@ -56,6 +56,9 @@ function updateCharts(sample){
         var barData = [bartrace];
    
         var barlayout={
+            title: "Top 10 Samples: Operational Taxonomic Units",
+            height: 500,
+            width: 1000,
         };
 
         Plotly.newplot("bar", bardata, barlayout);
@@ -76,7 +79,6 @@ function updateCharts(sample){
         var bubblelayout = {      
             title: "Bubble Chart: Operational Taxonomic Units",
             margin: {
-
                 l: 50,
                 r: 50,
                 t: 50, 
