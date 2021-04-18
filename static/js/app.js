@@ -51,9 +51,9 @@ function updateCharts(sample){
 
     //Bar Plot
     var bartrace = {
-        x: slicedIds.reverse(),
-        y: slicedValues.reverse(),
-        text: slicedLabels.reverse(),
+        x: topTen.reverse(),
+        y: topValues.reverse(),
+        text: topLabels.reverse(),
         type: "bar",
         orientation: "h",
     };
