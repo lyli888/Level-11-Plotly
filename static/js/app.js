@@ -110,7 +110,7 @@ function updateMetatable(sample){
 };
 
 //Update Function
-function updateInfo(name){
+function optionChanged(name){
 
     updateMetatable(name);
     updateCharts(name);
