@@ -44,7 +44,7 @@ function updateCharts(sample){
     var sampleValues = currentdata.sample_values;
     var otuLabels = currentdata.otu_labels;
 
-    //Top 10
+    //Top 10 Slice
     var topTen = otuIds.slice(0,10);
     var topValues = sampleValues.slice(0,10);
     var topLabels = otuLabels.slice(0,10);
