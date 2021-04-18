@@ -2,7 +2,7 @@
 var readpath = "../../samples.json";
 
 //Init  Function To Load Dropdown menu at start
-function init(){
+function initialize(){
 
     //D3 Read In Data
     d3.json(readpath).then(data => {
@@ -126,4 +126,4 @@ function updateMetatable(sample){
 
 
 //Call Init
-init();
+initialize();
