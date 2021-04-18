@@ -96,7 +96,6 @@ function updateCharts(sample){
 };
 
 
-
 //Update Metadata Table
 function updateMetatable(sample){
 
@@ -121,7 +120,6 @@ function updateInfo(name){
     updateCharts(name);
 
 };
-
 
 
 //Call Init
