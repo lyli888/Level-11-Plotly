@@ -25,17 +25,6 @@ function initialize(){
 };
 
 
-
-//Update Function
-function updateInfo(name){
-
-    updateMetatable(name);
-    updateCharts(name);
-
-};
-
-
-
 //Update Charts
 function updateCharts(sample){
     d3.json(readpath).then(data => {
@@ -102,6 +91,7 @@ function updateCharts(sample){
     };
 
     Plotly.newPlot("bubble", bubbleData, bubblelayout); 
+
     });
 };
 
@@ -123,6 +113,15 @@ function updateMetatable(sample){
     })
 
 };
+
+//Update Function
+function updateInfo(name){
+
+    updateMetatable(name);
+    updateCharts(name);
+
+};
+
 
 
 //Call Init
