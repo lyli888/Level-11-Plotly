@@ -41,6 +41,9 @@ function updateCharts(sample){
     d3.json(readpath).then(data => {
 
         var samples = data.samples;
+        var filteredsample = samples.filter(d => d.id == sample);
+        var currentsample = filteredsample[0];
+        console.log(currentsample);
 
         //Graph Info Vars
         var otuIds = currentdata.otu_ids;
@@ -64,8 +67,6 @@ function updateCharts(sample){
         var barData = [bartrace];
    
         var barlayout={
-
-
         };
 
 
@@ -111,14 +112,14 @@ function updateMetatable(sample){
 
     d3.json(readpath).then(data =>{
         var metadata = data.metadata;
-        var resultsdata = metadata.filter(d => d.id == sample);
-        var currentdata = resultsdata[0];
+        var filteredmeta = metadata.filter(d => d.id == sample);
+        var currentmeta = filteredmeta[0];
         var demographics = d3.select("#sample-metadata");
         demomographics.html("");
         Object.entries(currentdata).forEach(([key, value]) => {
             demographics.append("h6").text(`${key}: ${value}`)
         });
-        console.log(currentdata);
+        console.log(currentmeta);
     })
 
 };
