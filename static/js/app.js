@@ -58,14 +58,9 @@ function updateCharts(sample){
         var barlayout={
         };
 
-
-
         Plotly.newplot("bar", bardata, barlayout);
 
-
-
         //Bubble Chart
-
         var bubbletrace = {
             x: otuIds,
             y: sampleValues,
@@ -78,19 +73,18 @@ function updateCharts(sample){
     };
 
         var bubbleData = [bubbletrace];
-
         var bubblelayout = {      
             title: "Bubble Chart: Operational Taxonomic Units",
             margin: {
 
-                l: 150,
-                r: 150,
-                t: 150, 
-                b: 150,
+                l: 50,
+                r: 50,
+                t: 50, 
+                b: 50,
         }
     };
 
-    Plotly.newPlot("bubble", bubbleData, bubblelayout); 
+        Plotly.newPlot("bubble", bubbleData, bubblelayout); 
 
     });
 };
