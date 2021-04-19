@@ -1,5 +1,5 @@
 //Read Path To Samples File
-var readpath = "../../samples.json";
+var readpath = "data/samples.json";
 
 //Init Function
 function initialize(){
