@@ -2,6 +2,9 @@
 //Init Function
 function initialize(){
     var dropdown = d3.select("#selDataset");
+    var samples = data.samples;
+    var metadata = data.metadata;
+    
     //D3 Read In Data
     d3.json("data/samples.json").then(data => {
         var names = data.names;
