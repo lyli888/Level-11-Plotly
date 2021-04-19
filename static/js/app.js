@@ -29,9 +29,9 @@ function updateCharts(sample){
         console.log(currentsample);
 
         //Graph Info Vars
-        var otuIds = currentdata.otu_ids;
-        var sampleValues = currentdata.sample_values;
-        var otuLabels = currentdata.otu_labels;
+        var otuIds = currentsample.otu_ids;
+        var sampleValues = currentsample.sample_values;
+        var otuLabels = currentsample.otu_labels;
 
         //Top 10 Slice
         var topTen = otuIds.slice(0,10);
