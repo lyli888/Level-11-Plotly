@@ -1,11 +1,9 @@
-//Read Path To Samples File
-var readpath = "data/samples.json";
 
 //Init Function
 function initialize(){
 
     //D3 Read In Data
-    d3.json(readpath).then(data => {
+    d3.json("data/samples.json").then(data => {
         var names = data.names;
         var dropdown = d3.select("#selDataset");
 
@@ -27,7 +25,7 @@ function initialize(){
 
 //Update Charts
 function updateCharts(sample){
-    d3.json(readpath).then(data => {
+    d3.json("data/samples.json").then(data => {
 
         var samples = data.samples;
         var filteredsample = samples.filter(d => d.id == sample);
@@ -95,7 +93,7 @@ function updateCharts(sample){
 //Update Metadata Table
 function updateMetatable(sample){
 
-    d3.json(readpath).then(data =>{
+    d3.json("data/samples.json").then(data =>{
         var metadata = data.metadata;
         var filteredmeta = metadata.filter(d => d.id == sample);
         var currentmeta = filteredmeta[0];
