@@ -18,7 +18,7 @@ function initialize(){
     });
 
 };
-
+j
 //Update Charts
 function updateCharts(sample){
     d3.json("data/samples.json").then(data => {
@@ -98,10 +98,10 @@ function updateMetatable(sample){
 };
 
 //Update Function
-function optionChanged(name){
+function optionChanged(sample){
 
-    updateMetatable(name);
-    updateCharts(name);
+    updateMetatable(sample);
+    updateCharts(sample);
 
 };
 
