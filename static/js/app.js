@@ -54,7 +54,7 @@ function updateCharts(sample){
             width: 1000,
         };
 
-        Plotly.newplot("bar", bardata, barlayout);
+        Plotly.restyle("bar", bardata, barlayout);
 
         //Bubble Chart
         var bubbletrace = {
@@ -78,7 +78,7 @@ function updateCharts(sample){
             }
         };
         
-        Plotly.newPlot("bubble", bubbledata, bubblelayout); 
+        Plotly.restyle("bubble", bubbledata, bubblelayout); 
 
     });
 };
