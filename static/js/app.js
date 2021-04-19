@@ -70,10 +70,10 @@ function updateCharts(sample){
         var bubblelayout = {      
             title: "Bubble Chart: Operational Taxonomic Units",
             margin: {
-                l: 50,
-                r: 50,
-                t: 50, 
-                b: 50,
+                l: 100,
+                r: 100,
+                t: 100, 
+                b: 100,
             }
         };
         Plotly.newPlot("bubble", bubbledata, bubblelayout); 
@@ -99,10 +99,10 @@ function updateMetatable(sample){
 };
 
 //Update Function
-function optionChanged(sample){
+function optionChanged(name){
 
-    updateMetatable(sample);
-    updateCharts(sample);
+    updateMetatable(name);
+    updateCharts(name);
 
 };
 
