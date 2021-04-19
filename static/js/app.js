@@ -48,7 +48,6 @@ function updateCharts(sample){
         };
 
         var bardata = [bartrace];
-   
         var barlayout={
             title: "Top 10 Samples: Operational Taxonomic Units",
             height: 500,
@@ -93,7 +92,7 @@ function updateMetatable(sample){
         var filteredmeta = metadata.filter(d => d.id == sample);
         var currentmeta = filteredmeta[0];
         var demographics = d3.select("#sample-metadata");
-        demomographics.html("");
+        demographics.html("");
         Object.entries(currentdata).forEach(([key, value]) => {
             demographics.append("h6").text(`${key}: ${value}`)
         });
