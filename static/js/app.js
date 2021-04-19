@@ -1,18 +1,15 @@
 
 //Init Function
 function initialize(){
-
+    var dropdown = d3.select("#selDataset");
     //D3 Read In Data
     d3.json("data/samples.json").then(data => {
         var names = data.names;
-        var dropdown = d3.select("#selDataset");
-
         names.forEach(sample => {
             dropdown.append("option")
             .text(sample)
             .property("value",sample);
         });
-
         var initSample = names[0];
         console.log(initSample);
         updateMetatable(initSample);
@@ -21,7 +18,6 @@ function initialize(){
     });
 
 };
-
 
 //Update Charts
 function updateCharts(sample){
@@ -89,7 +85,6 @@ function updateCharts(sample){
     });
 };
 
-
 //Update Metadata Table
 function updateMetatable(sample){
 
@@ -114,7 +109,6 @@ function optionChanged(name){
     updateCharts(name);
 
 };
-
 
 //Call Init
 initialize();
