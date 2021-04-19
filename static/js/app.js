@@ -53,6 +53,7 @@ function updateCharts(sample){
             height: 500,
             width: 1000,
         };
+
         Plotly.newplot("bar", bardata, barlayout);
 
         //Bubble Chart
@@ -76,6 +77,7 @@ function updateCharts(sample){
                 b: 100,
             }
         };
+        
         Plotly.newPlot("bubble", bubbledata, bubblelayout); 
 
     });
@@ -90,7 +92,7 @@ function updateMetatable(sample){
         var currentmeta = filteredmeta[0];
         var demographics = d3.select("#sample-metadata");
         demographics.html("");
-        Object.entries(currentdata).forEach(([key, value]) => {
+        Object.entries(currentmeta).forEach(([key, value]) => {
             demographics.append("h6").text(`${key}: ${value}`)
         });
         console.log(currentmeta);
