@@ -46,14 +46,12 @@ function updateCharts(sample){
             type: "bar",
             orientation: "h",
         };
-
         var bardata = [bartrace];
         var barlayout={
             title: "Top 10 Samples: Operational Taxonomic Units",
             height: 500,
             width: 1000,
         };
-
         Plotly.newplot("bar", bardata, barlayout);
 
         //Bubble Chart
@@ -65,9 +63,8 @@ function updateCharts(sample){
             marker: {
                 color: otuIds,
                 size: sampleValues
-        }
-    };
-
+            }
+        };
         var bubbledata = [bubbletrace];
         var bubblelayout = {      
             title: "Bubble Chart: Operational Taxonomic Units",
@@ -76,9 +73,8 @@ function updateCharts(sample){
                 r: 50,
                 t: 50, 
                 b: 50,
-        }
-    };
-
+            }
+        };
         Plotly.newPlot("bubble", bubbledata, bubblelayout); 
 
     });
