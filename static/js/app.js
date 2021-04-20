@@ -3,7 +3,7 @@
 function initialize(){
     var dropdown = d3.select("#selDataset");
 
-    //D3 Read In Data
+    //D3 Read In Data From JSON Object
     d3.json("data/samples.json").then(data => {
         var names = data.names;
         names.forEach(sample => {
