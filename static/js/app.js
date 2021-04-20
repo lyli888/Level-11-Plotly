@@ -34,7 +34,7 @@ function updateCharts(sample){
         var sampleValues = currentsample.sample_values;
         var otuLabels = currentsample.otu_labels;
 
-        //Top 10 Slice
+        //Top 10 For Each Test Subject
         var topTen = otuIds.slice(0,10);
         var topValues = sampleValues.slice(0,10);
         var topLabels = otuLabels.slice(0,10);
@@ -100,7 +100,7 @@ function updateMetatable(sample){
 
 };
 
-//Update Function
+//Update Function For Dropdown Menu
 function optionChanged(name){
 
     updateMetatable(name);
