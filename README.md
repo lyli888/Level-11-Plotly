@@ -1,4 +1,4 @@
-# Level-9-Plotly Homework - Belly Button Biodiversity
+# Belly Button Biodiversity
 
 
 Build an interactive dashboard to explore the [Belly Button Biodiversity Dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels & deploy to Github Pages [here](https://lyli888.github.io/Level-9-Plotly/).
