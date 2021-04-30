@@ -1,7 +1,8 @@
-# Belly Button Biodiversity
+# Belly Button Biodiversity - Interactive Visual Dashboard
 
+### Go [here](https://lyli888.github.io/Level-11-Plotly/) to interact with the dataset!
 
-Build an interactive dashboard to explore the [Belly Button Biodiversity Dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels & deploy to Github Pages [here](https://lyli888.github.io/Level-11-Plotly/).
+Build an interactive dashboard to explore the [Belly Button Biodiversity Dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels & deploy to [Github Pages](https://lyli888.github.io/Level-11-Plotly/).
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
