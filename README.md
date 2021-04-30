@@ -1,4 +1,4 @@
-# Belly Button Biodiversity - Interactive Visual Dashboard
+# Belly Button Biodiversity - Interactive Visualization Dashboard
 
 ### Go [here](https://lyli888.github.io/Level-11-Plotly/) to interact with the dataset!
 
