@@ -40,7 +40,7 @@ Display the sample metadata, i.e., an individual's demographic information.
 
 ### Updates
 
-6. Update all of the plots any time that a new sample is selected.
+* Update all of the plots any time that a new sample is selected.
 
 ### Publish The Results to Github Pages
 
